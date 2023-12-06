@@ -20,18 +20,6 @@ resource "aws_instance" "web" {
   tags = {
     Name = "WebServer"
   }
-
-  provisioner "file" {
-    source = "D:\KP1-M.pem"
-    destination = "/home/ubuntu/KP1-M.pem"
-  
-    connection {
-      type = "ssh"
-      host = self.public_ip
-      user = "ubuntu"
-      private_key = "${file("./KP1-M.pem")}"
-    }  
-  }
 }
 
 resource "aws_instance" "db" {
