@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
   }
 
   provisioner "file" {
-    source = "C:\Users\PK\Videos\p3\KP1-M.pem"
+    source = "D:\KP1-M.pem"
     destination = "/home/ubuntu/KP1-M.pem"
   
     connection {
