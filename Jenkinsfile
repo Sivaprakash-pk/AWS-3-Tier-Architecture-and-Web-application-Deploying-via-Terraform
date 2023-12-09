@@ -54,12 +54,6 @@ pipeline {
                 }
             }
         }
-        stage('Remove AWS Configuration') {
-            steps {
-                sudo rm .aws/credentials
-                sudo rm .aws/config
-            }
-        }
     }
 
     post {
